@@ -163,8 +163,8 @@
     ripgrep
     socat
     starship
+    tree-sitter
     tldr
-    treesitter
     ugrep
     unrar
     v4l-utils
