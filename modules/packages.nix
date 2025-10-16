@@ -146,6 +146,7 @@
 
     # Utils
     atop
+    fzf
     gdu
     glances
     gping
@@ -163,6 +164,7 @@
     socat
     starship
     tldr
+    tree-sitter-cli
     ugrep
     unrar
     v4l-utils
