@@ -83,6 +83,7 @@ in
     hostName = "${host}";
     timeServers = options.networking.timeServers.default ++ [ "pool.ntp.org" ];
     networkmanager.dns = "systemd-resolved";
+    firewall.checkReversePath = "loose";
   };
 
   # Set your time zone.
