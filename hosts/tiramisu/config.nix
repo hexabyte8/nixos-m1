@@ -77,7 +77,6 @@ in
   services.resolved = {
     enable = true;
     dnssec = "allow-downgrade";
-    fallbackDns = ["1.1.1.1" "8.8.8.8"];
   };
   networking = {
     networkmanager.enable = true;
