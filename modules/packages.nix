@@ -154,6 +154,11 @@
     ipfetch
     lolcat
     lsd
+    lua-language-server
+    nil
+    clang-tools
+    rust-analyzer
+    pyright
     oh-my-posh
     pfetch
     ncdu
