@@ -181,8 +181,9 @@
     virt-viewer
     libvirt
 
-    # Video
-    vlc
+    #ebook reader
+    epy
+
 
     # Terminals
     kitty
