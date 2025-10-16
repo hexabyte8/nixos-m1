@@ -1,0 +1,188 @@
+{
+  pkgs,
+  inputs,
+  host,
+  ...
+}:
+{
+
+  programs = {
+    hyprland = {
+      enable = true;
+      withUWSM = false;
+      #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland; #hyprland-git
+      #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland; #xdph-git
+
+      portalPackage = pkgs.xdg-desktop-portal-hyprland; # xdph none git
+      xwayland.enable = true;
+    };
+    zsh.enable = true;
+    firefox.enable = true;
+    waybar.enable = true;
+    hyprlock.enable = true;
+    dconf.enable = true;
+    seahorse.enable = true;
+    fuse.userAllowOther = true;
+    mtr.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+    git.enable = true;
+    tmux.enable = true;
+    nm-applet.indicator = true;
+    neovim = {
+      enable = true;
+      defaultEditor = false;
+    };
+
+    thunar.enable = true;
+    thunar.plugins = with pkgs.xfce; [
+      exo
+      mousepad
+      thunar-archive-plugin
+      thunar-volman
+      tumbler
+    ];
+
+  };
+  services.tailscale.enable = true;
+  nixpkgs.config.allowUnfree = true;
+
+  environment.systemPackages = with pkgs; [
+
+    # Hyprland Stuff
+    hypridle
+    hyprpolkitagent
+    pyprland
+    #uwsm
+    hyprlang
+    hyprshot
+    hyprcursor
+    mesa
+    nwg-displays
+    nwg-look
+    waypaper
+    hyprland-qt-support # for hyprland-qt-support
+
+    #  Apps
+    loupe
+    appimage-run
+    bc
+    brightnessctl
+    bottom
+    baobab
+    btrfs-progs
+    cmatrix
+    dua
+    duf
+    cava
+    cargo
+    clang
+    cmake
+    cliphist
+    curl
+    dysk
+    eog
+    eza
+    findutils
+    figlet
+    ffmpeg
+    fd
+    feh
+    file-roller
+    glib # for gsettings to work
+    gsettings-qt
+    git
+    gnome-system-monitor
+    fastfetch
+    jq
+    gcc
+    git
+    gnumake
+    grim
+    grimblast
+    gtk-engine-murrine # for gtk themes
+    inxi
+    imagemagick
+    killall
+    kdePackages.qt6ct
+    kdePackages.qtwayland
+    kdePackages.qtstyleplugin-kvantum # kvantum
+    lazydocker
+    libappindicator
+    libnotify
+    libsForQt5.qtstyleplugin-kvantum # kvantum
+    libsForQt5.qt5ct
+    obsidian
+    (mpv.override { scripts = [ mpvScripts.mpris ]; }) # with tray
+    nvtopPackages.full
+    openssl # required by Rainbow borders
+    pciutils
+    networkmanagerapplet
+    pamixer
+    pavucontrol
+    playerctl
+    kdePackages.polkit-kde-agent-1
+    rofi
+    slurp
+    swappy
+    swaynotificationcenter
+    swww
+    unzip
+    wallust
+    wdisplays
+    wl-clipboard
+    wlr-randr
+    wlogout
+    wget
+    xarchiver
+    yad
+    yazi
+    yt-dlp
+
+    (inputs.quickshell.packages.${pkgs.system}.default)
+    (inputs.ags.packages.${pkgs.system}.default)
+
+    # Utils
+    atop
+    gdu
+    glances
+    gping
+    htop
+    hyfetch
+    ipfetch
+    lolcat
+    lsd
+    oh-my-posh
+    pfetch
+    ncdu
+    ncftp
+    ripgrep
+    socat
+    starship
+    tldr
+    ugrep
+    unrar
+    v4l-utils
+    zoxide
+    wavemon
+
+    # Development related
+    luarocks
+    nh
+
+    # Virtuaizaiton
+    virt-viewer
+    libvirt
+
+    # Video
+    vlc
+
+    # Terminals
+    kitty
+    wezterm
+
+  ];
+
+}
