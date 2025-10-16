@@ -169,8 +169,9 @@
     zoxide
     wavemon
 
-    # discord
+    # discord and signal
     vesktop
+    signal-desktop
 
     # Development related
     luarocks
