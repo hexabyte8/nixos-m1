@@ -164,7 +164,7 @@
     socat
     starship
     tldr
-    tree-sitter-cli
+    treesitter
     ugrep
     unrar
     v4l-utils
