@@ -176,6 +176,17 @@
     socat
     starship
     tree-sitter
+    tree-sitter-grammars.tree-sitter-lua
+    tree-sitter-grammars.tree-sitter-c
+    tree-sitter-grammars.tree-sitter-cpp
+    tree-sitter-grammars.tree-sitter-javascript
+    tree-sitter-grammars.tree-sitter-typescript
+    tree-sitter-grammars.tree-sitter-python
+    tree-sitter-grammars.tree-sitter-nix
+    tree-sitter-grammars.tree-sitter-bash
+    tree-sitter-grammars.tree-sitter-json
+    tree-sitter-grammars.tree-sitter-html
+    tree-sitter-grammars.tree-sitter-css
     tldr
     ugrep
     unrar
@@ -204,24 +215,4 @@
     wezterm
 
   ];
-  configure = {
-    customRC = "";
-    packages.myVimPackage = with pkgs.vimPlugins; {
-      start = [ 
-        (nvim-treesitter.withPlugins (plugins: with plugins; [
-          tree-sitter-lua
-          tree-sitter-c
-          tree-sitter-cpp
-          tree-sitter-javascript
-          tree-sitter-typescript
-          tree-sitter-python
-          tree-sitter-nix
-          tree-sitter-bash
-          tree-sitter-json
-          tree-sitter-html
-          tree-sitter-css
-        ]))
-      ];
-    };
-  };
 }
