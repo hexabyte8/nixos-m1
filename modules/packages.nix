@@ -151,7 +151,6 @@
     nodePackages.typescript-language-server
     nodePackages.vscode-langservers-extracted # html, css, json, eslint
     nodePackages.yaml-language-server
-    python311Packages.python-lsp-server
     nodejs # needed for many LSPs
     stylua # Lua formatter
     black # Python formatter
