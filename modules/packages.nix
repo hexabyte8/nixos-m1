@@ -33,7 +33,7 @@
     nm-applet.indicator = true;
     neovim = {
       enable = true;
-      defaultEditor = false;
+      defaultEditor = true;
     };
 
     thunar.enable = true;
@@ -204,5 +204,24 @@
     wezterm
 
   ];
-
+  configure = {
+    customRC = "";
+    packages.myVimPackage = with pkgs.vimPlugins; {
+      start = [ 
+        (nvim-treesitter.withPlugins (plugins: with plugins; [
+          tree-sitter-lua
+          tree-sitter-c
+          tree-sitter-cpp
+          tree-sitter-javascript
+          tree-sitter-typescript
+          tree-sitter-python
+          tree-sitter-nix
+          tree-sitter-bash
+          tree-sitter-json
+          tree-sitter-html
+          tree-sitter-css
+        ]))
+      ];
+    };
+  };
 }
