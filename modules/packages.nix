@@ -195,9 +195,10 @@
     zoxide
     wavemon
 
-    # discord and signal
+    # communications
     vesktop
     signal-desktop
+    halloy
 
     # Development related
     luarocks
