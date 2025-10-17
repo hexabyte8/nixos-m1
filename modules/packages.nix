@@ -115,6 +115,7 @@
     libsForQt5.qtstyleplugin-kvantum # kvantum
     libsForQt5.qt5ct
     obsidian
+    qutebrowser
     (mpv.override { scripts = [ mpvScripts.mpris ]; }) # with tray
     nvtopPackages.full
     openssl # required by Rainbow borders
