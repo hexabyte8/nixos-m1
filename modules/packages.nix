@@ -121,6 +121,7 @@
     net-tools
     bind
     openssl # required by Rainbow borders
+    opencode
     pciutils
     networkmanagerapplet
     pamixer
