@@ -118,6 +118,7 @@
     qutebrowser
     (mpv.override { scripts = [ mpvScripts.mpris ]; }) # with tray
     nvtopPackages.full
+    net-tools
     openssl # required by Rainbow borders
     pciutils
     networkmanagerapplet
