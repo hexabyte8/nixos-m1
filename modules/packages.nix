@@ -119,6 +119,7 @@
     (mpv.override { scripts = [ mpvScripts.mpris ]; }) # with tray
     nvtopPackages.full
     net-tools
+    bind
     openssl # required by Rainbow borders
     pciutils
     networkmanagerapplet
