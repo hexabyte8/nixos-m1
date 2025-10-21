@@ -119,6 +119,7 @@
     (mpv.override { scripts = [ mpvScripts.mpris ]; }) # with tray
     nvtopPackages.full
     net-tools
+    nmap
     bind
     openssl # required by Rainbow borders
     opencode
